@@ -24,7 +24,7 @@ cursor: pointer;
 .profile-share:hover{
   background-color: #686d77;
 }
-.profile p{
+.profile-main p{
   width: 1152px;
 height: 30px;
 
@@ -53,10 +53,10 @@ color: #101828;
 
 }
 .btn{
-  padding: 24px 32px;
+  padding: 12px 16px;
   gap: 8px;
   width: 1152px;
-  height: 76px;
+  height: 38px;
 margin:1rem;
 background: #EAECF0;
 border: 1px solid #EAECF0;
@@ -70,6 +70,9 @@ line-height: 28px;
 text-align: center;
 color: #101828;
 text-decoration: none; 
+display: flex;
+align-items: center;
+justify-content: center;
 }
 
 
@@ -119,6 +122,9 @@ color: #667085;
   .profile-share-mobile{
     display:none;
   }
+  .profile-share-mobile:hover{
+    background-color:#667085;
+  }
   /*Media Queries */
   @media (max-width:768px) {
   .profile-share{
@@ -130,7 +136,7 @@ color: #667085;
     position:absolute;
     top: 20px;
     right:20px;
-    border-radius: 100%;
+    border-radius: 50%;
     padding: .5rem;
     cursor: pointer;
   }
