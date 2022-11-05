@@ -2,19 +2,22 @@ import React from 'react'
 import Footer from './Footer'
 const Contact = () => {
   let name ='Salamah'
-  var onClick=()=>{
+  var onSubmit=(e)=>{
+    e.preventDefault();
     var message =document.getElementById('message')
+    console.log(message.value)
     var error = document.getElementById('error')
-    if(message.value ==='') {
-      message.style.border='1px solid red';
-      error.style.display='block'
+    if(message.value ==="") {
+     message.style.border='1px solid red'
+     error.style.display='block'
     }
+    return
   }
   return (
-    <div class='contact'>
+    <div className='contact'>
       <h2>Contact Me</h2>
       <p>Hi there, contact me to ask me anything you have in mind</p>
-      <form action="" className="form-container">
+      <form action="" className="form-container" onSubmit={onSubmit}>
         <div className="names">
           <div className="first-name">
            <label htmlFor="first-name">First name</label>
@@ -38,7 +41,8 @@ const Contact = () => {
         <input type="checkbox" name="consent" />
         <p>You agree to providing your data to {name} who may contact you</p>
         </div>
-        <button id='btn__submit' onClick={onClick}>Send Message</button>
+        <input type="submit" value="Send Message" class='button' id='btn__submit'  />
+        {/*<input type='submit' class='button' id='btn__submit' value ='Send Message'/>*/}
       </form>
       <Footer/>
     </div>

@@ -135,6 +135,9 @@ color: #475467;
 width: 720px;
 height: 30px;
   }
+  .form-container > div{
+    margin-top: 1rem;
+  }
   .form-container label{
     width: 71px;
    height: 20px;
@@ -252,7 +255,7 @@ line-height: 24px;
 color: #475467;
 margin-left:.5rem;
 }
-button{
+.button{
   padding: 12px 20px;
   gap: 8px;
   box-sizing: border-box;
@@ -272,8 +275,8 @@ input[type='checkbox']:focus{
   box-shadow: 0px 0px 0px 4px #D1E9FF;
   outline: none; 
 }
-button:hover,
-button:focus{
+.button:hover,
+.button:focus{
   background-color:#84CAFF ;
 }
 input:hover,
@@ -336,15 +339,15 @@ color: #F83F23;
   text-align: left;
 }
 .contact{
-  width: 768px;
+  width: 400px;
   height: 884px;
   left: 0px;
   top: 0px;
   padding: 16px 0px;
   align-items: flex-start;
   justify-content: flex-start;
-  margin: 2rem;
 }
+
 .contact h2{
   width: 343px;
   height: 44px;
@@ -363,11 +366,14 @@ height: 56px;
 .message textarea{
   width: 343px;
 }
+.message textarea::placeholder{
+  width: 340px;
+}
 .check p{
   width: 311px;
 height: 48px;
 }
-button{
+.button{
   width: 343px;
 }
   }
