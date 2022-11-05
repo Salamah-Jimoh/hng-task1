@@ -1,6 +1,7 @@
 import React from 'react'
 import Slack from './assets/slack.svg'
 import Github from './assets/github.png'
+import {Outlet, Link} from 'react-router-dom'
 const Links = () => {
   return (
     <div className='links'> 
@@ -18,6 +19,9 @@ const Links = () => {
       <a className="btn"
         href="https://books.zuri.team/design-rules"  id='book__design' title='Be among the lucky people that take home this amazing book for free!'>Free Book?
       </a>
+      <Link className="btn"
+        to ='/contact'  id='contact' >Contact </Link>
+        <Outlet/>
       <div className="socials">
         <a href=""><img src={Slack} alt="Slack icon" /></a>
         <a href=""><img src={Github} alt="Github icon" /></a>
