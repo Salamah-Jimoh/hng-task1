@@ -4,14 +4,24 @@ const Contact = () => {
   let name ='Salamah'
   var onSubmit=(e)=>{
     e.preventDefault();
-    var message =document.getElementById('message')
-    console.log(message.value)
-    var error = document.getElementById('error')
-    if(message.value ==="") {
-     message.style.border='1px solid red'
-     error.style.display='block'
+    let firstName= document.getElementById('first_name');
+    let lastName= document.getElementById('last_name');
+    let email = document.getElementById('email');
+    let message =document.getElementById('message');
+    let error = document.getElementById('error')
+    if(message.value =='') {
+     message.style.border='1px solid red';
+     error.style.display='block';
     }
-    return
+    else{
+      message.style.border='1px solid #84CAFF';
+      error.style.display='none';
+      message.value='';
+      firstName.value='';
+      lastName.value='';
+      email.value='';
+    }
+    
   }
   return (
     <div className='contact'>
@@ -21,11 +31,11 @@ const Contact = () => {
         <div className="names">
           <div className="first-name">
            <label htmlFor="first-name">First name</label>
-           <input type="text" name='first-name'id='first_name' placeholder='Enter your first name'/>
+           <input type="text" name='first-name'id='first_name' placeholder='Enter your first name' required/>
           </div>
           <div className="last-name">
-           <label htmlFor="last-name">last name</label>
-           <input type="text" name='last-name' id='last_name' placeholder='Enter your last name'/>
+           <label htmlFor="last-name">Last name</label>
+           <input type="text" name='last-name' id='last_name' placeholder='Enter your last name' required/>
           </div>
         </div>
         <div className="form-group">
